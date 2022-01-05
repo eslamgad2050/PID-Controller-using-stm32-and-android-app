@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0C0115"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/kp_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="KP"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/k_p"
+        app:layout_constraintEnd_toStartOf="@+id/k_p"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/k_p" />
+
+    <EditText
+
+        android:id="@+id/k_p"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="2"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ki_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="KI"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/k_i"
+        app:layout_constraintEnd_toStartOf="@+id/k_i"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/k_i" />
+
+    <EditText
+        android:id="@+id/k_i"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="10"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toBottomOf="@id/k_p" />
+
+    <TextView
+        android:id="@+id/kd_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="KD"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@id/k_d"
+        app:layout_constraintEnd_toStartOf="@+id/k_d"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/k_d" />
+
+    <EditText
+        android:id="@+id/k_d"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:text="0"
+        android:textColor="#ddd"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toBottomOf="@id/k_i" />
+
+    <TextView
+        android:id="@+id/set_point_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="set point"
+        android:textColor="#ddd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/set_point"
+        app:layout_constraintEnd_toStartOf="@+id/set_point"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/set_point" />
+
+    <TextView
+        android:id="@+id/set_point"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="500"
+        android:textColor="#ddd"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toBottomOf="@id/k_d" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="1000"
+        android:progress="500"
+        app:layout_constraintTop_toBottomOf="@id/set_point" />
+
+    <Button
+        android:id="@+id/modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="60dp"
+        android:backgroundTint="#E7E4ED"
+        android:onClick="modify"
+        android:padding="20dp"
+        android:text="modify"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/set_point" />
+
+    <TextView
+        android:id="@+id/pid_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Output"
+        android:textColor="#ddd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/pid"
+        app:layout_constraintEnd_toStartOf="@+id/pid"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pid" />
+
+    <TextView
+        android:id="@+id/pid"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#ddd"
+        android:gravity=""
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toBottomOf="@id/modify" />
+
+    <TextView
+        android:id="@+id/error_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Error"
+        android:textColor="#ddd"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/error"
+        app:layout_constraintEnd_toStartOf="@+id/error"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/error" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        android:textColor="#ddd"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/kp_textview"
+        app:layout_constraintTop_toBottomOf="@id/pid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
